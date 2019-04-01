@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.averyw.cocktailmaker.MainActivity">
+
+    <Button
+        android:id="@+id/btnGetDrinkList"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="getSpiritList"
+        android:text="@string/go_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_spiritname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toEndOf="@+id/editText_spiritname"
+        android:background="@drawable/btn_rounded"
+        android:textColor="@color/btn_text" />
+
+    <Button
+        android:id="@+id/btnGetDrink"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="getDrink"
+        android:text="Get drink"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_drinkname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintStart_toEndOf="@+id/editText_drinkname"
+        android:background="@drawable/btn_rounded"
+        android:textColor="@color/btn_text" />
+
+    <EditText
+        android:id="@+id/editText_drinkname"
+        android:layout_width="wrap_content"
+        android:minWidth="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="Enter drink name"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_intro"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+    <EditText
+        android:id="@+id/editText_spiritname"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Enter a spirit"
+        android:inputType="text|textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_drinkname"
+        android:background="@drawable/edittext_background"
+        android:textCursorDrawable="@drawable/color_cursor"/>
+
+    <TextView
+        android:id="@+id/textView_intro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/intro"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

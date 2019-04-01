@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Avery\'s Cocktail Maker</string>
+    <string name="get_vodka">Get vodka drinks</string>
+    <string name="go_text">Go</string>
+    <string name="drink_title">Drink Name</string>
+    <string name="intro">
+        Mixology is popular, have you been wanting to try to mix your own cocktails?  Let\'s
+        get started!  Just enter the name of a cocktail or spirit.
+    </string>
+</resources>
