@@ -11,33 +11,34 @@
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/btn_rounded"
         android:onClick="getSpiritList"
         android:text="@string/go_text"
+        android:textColor="@color/btn_text"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_spiritname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toEndOf="@+id/editText_spiritname"
-        android:background="@drawable/btn_rounded"
-        android:textColor="@color/btn_text" />
+        app:layout_constraintStart_toEndOf="@+id/editText_spiritname" />
 
     <Button
         android:id="@+id/btnGetDrink"
         android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/btn_rounded"
         android:onClick="getDrink"
         android:text="Get drink"
+        android:textColor="@color/btn_text"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_drinkname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.702"
-        app:layout_constraintStart_toEndOf="@+id/editText_drinkname"
-        android:background="@drawable/btn_rounded"
-        android:textColor="@color/btn_text" />
+        app:layout_constraintStart_toEndOf="@+id/editText_drinkname" />
 
     <EditText
         android:id="@+id/editText_drinkname"
         android:layout_width="wrap_content"
-        android:minWidth="100dp"
         android:layout_height="40dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
@@ -45,9 +46,12 @@
         android:ems="10"
         android:hint="Enter drink name"
         android:inputType="textPersonName"
+        android:minWidth="100dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_intro"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView_intro" />
 
     <EditText
         android:id="@+id/editText_spiritname"
@@ -55,13 +59,15 @@
         android:layout_height="40dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Enter a spirit"
         android:inputType="text|textPersonName"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/color_cursor"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_drinkname"
-        android:background="@drawable/edittext_background"
-        android:textCursorDrawable="@drawable/color_cursor"/>
+        app:layout_constraintTop_toBottomOf="@+id/editText_drinkname" />
 
     <TextView
         android:id="@+id/textView_intro"

@@ -14,8 +14,7 @@ import kotlinx.android.synthetic.main.drink_detail.view.*
 class  DrinkDetailAdapter(val drinkList: DrinkList): RecyclerView.Adapter<DrinkInstructionViewHolder>(){
 
     override fun getItemCount(): Int {
-        return 1
-//        return drinkList.drinks.count()
+        return drinkList.drinks.count()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int):DrinkInstructionViewHolder {
@@ -26,7 +25,7 @@ class  DrinkDetailAdapter(val drinkList: DrinkList): RecyclerView.Adapter<DrinkI
 
     override fun onBindViewHolder(holder: DrinkInstructionViewHolder?, position: Int) {
         val drink = drinkList.drinks.get(position)
-
+        println("Drinks: " + drink)
         holder?.customView?.textView_title?.text = drink.strDrink
         holder?.customView?.textView_glass?.text = drink.strGlass
         holder?.customView?.textView_instructions1?.text = drink.strMeasure1 + drink.strIngredient1

@@ -38,7 +38,6 @@ class DrinkDetailActivity : AppCompatActivity() {
                 val gson = GsonBuilder().create()
 
                 val instructions = gson.fromJson(body, DrinkList::class.java)
-
                 runOnUiThread{
                     // acts like table view delegate (adapter)
                     recyclerView_drinks.adapter = DrinkDetailAdapter(instructions)

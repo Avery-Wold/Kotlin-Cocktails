@@ -1,5 +1,6 @@
 package com.example.averyw.cocktailmaker
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -18,15 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        val error = intent.getStringExtra(ERROR_MESSAGE)
-//
-//        if(error != null){
-//            Toast.makeText(this, "Please input valid drink name", Toast.LENGTH_SHORT)
-//        }
-//    }
-
     fun getDrink(view: View){
         val editText = findViewById<EditText>(R.id.editText_drinkname)
         var drink = editText.text.toString()
@@ -35,12 +27,18 @@ class MainActivity : AppCompatActivity() {
             putExtra(DRINK_MESSAGE, drink)
         }
         if (drink.isEmpty()){
-            Toast.makeText(this, "Enter a valid drink name", Toast.LENGTH_SHORT).show()
+            val builder = AlertDialog.Builder(this, R.style.AlertDialogCustom)
+            builder.setTitle(R.string.title_dialog)
+            builder.setMessage(R.string.drink_dialog)
+            val dialog: AlertDialog = builder.create()
+            builder.setPositiveButton(R.string.try_again){_,_ ->
+                dialog.dismiss()
+            }
+            dialog.show()
         }
         else {
             startActivity(intent)
         }
-
         editText.text.clear()
     }
 
@@ -51,12 +49,18 @@ class MainActivity : AppCompatActivity() {
             putExtra(SPIRIT_MESSAGE, spirit)
         }
         if (spirit.isEmpty()){
-            Toast.makeText(this, "Enter a valid spirit name", Toast.LENGTH_SHORT).show()
+            val builder = AlertDialog.Builder(this, R.style.AlertDialogCustom)
+            builder.setTitle(R.string.title_dialog)
+            builder.setMessage(R.string.spirit_dialog)
+            val dialog: AlertDialog = builder.create()
+            builder.setPositiveButton(R.string.try_again){_,_ ->
+                dialog.dismiss()
+            }
+            dialog.show()
         }
         else {
             startActivity(intent)
         }
-
         editText.text.clear()
     }
 }
